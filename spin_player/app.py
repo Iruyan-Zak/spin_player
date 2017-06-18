@@ -134,54 +134,6 @@ def get_disk_space():
 
 if __name__ == "__main__":
     from os import makedirs
-    from bottle import debug
     makedirs('media', exist_ok=True)
-    debug(True)
 
-    run(host='localhost', port=8080, reloader=True)
-
-
-"""
-def hoge():
-    import youtube_dl
-    import re
-    from os.path import exists
-
-    url = 'https://www.youtube.com/watch?v=CWz_SjJSK9s'
-    output = re.search(r'(?:v=|youtu\.be/)(.*)', url).group(1)
-
-    if exists("media/{}.mp3".format(output)):
-        print("その曲知ってる！")
-        return
-
-    class MyLogger(object):
-        def debug(self, msg):
-            print(msg)
-
-        def warning(self, msg):
-            print(msg)
-
-        def error(self, msg):
-            print(msg)
-
-    def my_hook(d):
-        if d['status'] == 'finished':
-            print('Done downloading, now converting ...')
-
-    ydl_opts = {
-        'outtmpl': 'media/{}.%(ext)s'.format(output),
-        'format': 'bestaudio/best',
-        'postprocessors': [{
-            'key': 'FFmpegExtractAudio',
-            'preferredcodec': 'mp3',
-            'preferredquality': '160',
-        }],
-        'logger': MyLogger(),
-        'progress_hooks': [my_hook],
-    }
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        ydl.download([url])
-
-    print("function end.")
-"""
-
+    run(host='localhost', port=80)
