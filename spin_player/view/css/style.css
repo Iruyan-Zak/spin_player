@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2017, Iruyan_Zak.
+ * License: MIT (see LICENSE for details)
+ */
+
+@media screen and (min-width: 959px) {
+    body {
+        width: 960px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        width: 100%;
+    }
+}
+
+.container {
+    width: 90%;
+    margin-top: 32px;
+}
+
